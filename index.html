@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>1 Лаба</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+</head>
+<body>
+    <h1>Шамов Г.С - Лабораторная работа №1</h1>
+    <script src="main.js"></script>
+
+    <!-- задача 1 -->
+    <h3>Задача 1</h3>
+    <p>
+        <input id="input" type="number" placeholder="Км/ч"
+        oninput = "speed(this.value, 1)"
+        onchange = "speed(this.value)">
+    </p>
+    <p> <span id="begin1"></span> км/ч соответствует <span id="m/s"></span> м/с</p> 
+    <p>
+        <input id="input" type="number" placeholder="м/с"
+        oninput = "speed(this.value, 0)"
+        onchange = "speed(this.value)">
+    </p>
+    <p> <span id="begin2"></span> м/с соответствует <span id="km/h"></span> км/ч</p> 
+
+    <!-- задача 2 -->
+    <h3>Задача 2</h3>
+    <p>
+        <input id="a" type="number" placeholder="a">
+        <input id="b" type="number" placeholder="b">
+        <input id="c" type="number" placeholder="с">
+    </p>
+    <button onclick="triangle()"> проверка</button>
+    <p id="ok"></p>
+
+    <!-- задача 3 -->
+    <h3>Задача 3</h3>
+    <p>
+        <input id="fu" type="number" placeholder="ваше число">
+    </p>
+    <button onclick="fizzbuzz()"> проверка</button>
+    <p id="fizzbuzz"></p>
+
+    <!-- задача 4 -->
+    <h3>Задача 4</h3>
+    <p>
+        <input id="sym" type="number" placeholder="высота елки">
+    </p>
+    <button onclick="elka()"> проверка</button>
+    <p id="elka"></p>
+
+    <!-- задача 5 -->
+    <h3>Задача 5</h3>
+    <button onclick="rund()"> загадать число</button>
+    <p>
+        <input id="num" type="number" placeholder="ваше число">
+    </p>
+    <button onclick="ugadaika()"> проверка</button>
+    <p id="otvet"></p>
+
+    <!-- задача 6 -->
+    <h3>Задача 6</h3>
+    <p>
+        <input id="n" type="number" placeholder="n">
+        <input id="x" type="number" placeholder="x">
+        <input id="y" type="number" placeholder="y">
+    </p>
+    <button onclick="delenie()"> проверка</button>
+    <p id="truefalse"></p>
+
+    <!-- задача 7 -->
+    <h3>Задача 7</h3>
+    <p>
+        <input id="month" type="number" placeholder="номер месяца">
+    </p>
+    <button onclick="month()"> проверка</button>
+    <p id="kvartal"></p>
+
+</body>
