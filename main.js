@@ -18,7 +18,8 @@ function triangle(a,b,c){
     if ( ( a > 0 ) && ( b > 0 ) && ( c > 0) && ( ( a + b > c ) && ( b + c > a ) && ( a + c > b ) ) ) {
         var p = (a + b + c);
         var s = Math.sqrt(p * (p - a) * (p - b) * (p - c)); 
-        ok = document.getElementById('ok').innerHTML ="Треугольник существует <br> Периметр = " + p + " <br>  Площадь = " + s + "<br> Соотношение = " + (p/s);
+        // ok = document.getElementById('ok').innerHTML ="Треугольник существует <br> Периметр = " + p + " <br>  Площадь = " + s + "<br> Соотношение = " + (p/s);
+        ok = document.getElementById('ok').innerHTML =`Треугольник существует <br> Периметр ${p} <br>  Площадь = ${s} <br> Соотношение = ${(p/s)}`
         } 
     else {
         ok = document.getElementById('ok').innerHTML ="Треугольника не существует";
@@ -44,7 +45,6 @@ function fizzbuzz(fu){
     document.getElementById('fizzbuzz').innerHTML = pr;
 }
 // задача 4
-
 function elka(sym){
     var sym = Number (document.getElementById("sym").value);
     var pr = "";
@@ -130,4 +130,73 @@ function month(month){
     else{
         kvartal = document.getElementById('kvartal').innerHTML ="число не соответствует месяцу";
     }
+}
+
+// задача 2
+function absValue(startnum){
+    var startnum = Number (document.getElementById("startnum").value);
+    var absValue;
+    if(startnum >= 0){
+        absValue = document.getElementById('absValue').innerHTML =`absValue(${startnum}) -> ${startnum}`;
+    }
+    else{
+        absValue = document.getElementById('absValue').innerHTML =`absValue(${startnum}) -> ${-startnum}`;
+    }
+}
+
+// задача 3
+function dannie(studentnum){
+    var studentnum = Number (document.getElementById("studentnum").value);
+    var dannie;
+    let student1 = {
+        group: 201,
+        last_name: "Иванов",
+        first_name: "Иван"
+        };
+    let student2 = {
+        group: 203,
+        last_name: "Сергеев",
+        first_name: "Сергей"
+        };
+    let student3 = {
+        group: 206,
+        last_name: "Кириллов",
+        first_name: "Кирилл"
+        };
+    if(studentnum == 1){
+        dannie = document.getElementById('dannie').innerHTML =`Список свойств: ${Object.keys(student1)}<br>
+        Студент ${student1.first_name} ${student1.last_name} учится в ${student1.group} группе`;
+    }
+    else if(studentnum == 2){
+        dannie = document.getElementById('dannie').innerHTML =`Список свойств: ${Object.keys(student2)}<br>
+        Студент ${student2.first_name} ${student2.last_name} учится в ${student2.group} группе`;
+    }
+    else if(studentnum == 3){
+        dannie = document.getElementById('dannie').innerHTML =`Список свойств: ${Object.keys(student3)}<br>
+        Студент ${student3.first_name} ${student3.last_name} учится в ${student3.group} группе`;
+    }
+    else{
+        dannie = document.getElementById('dannie').innerHTML ="Такой номер отсутствует"
+    }
+}
+
+// задача 4
+function Randomnum(min, max) {
+    var min = Number (document.getElementById("min").value);
+    var max = Number (document.getElementById("max").value);
+    let rund = Math.floor(Math.random()*(max - min - 1) + min + 1);
+    var Randomnum;
+    Randomnum = document.getElementById('Randomnum').innerHTML =`randomNumber(${min}, ${max}) -> ${rund}`
+}
+
+// задача 5
+function ValuesArray(mas) {
+    var mas = Number (document.getElementById("mas").value);
+    let Array = [1,2,3,4,5,6,7];
+    let NewArray = [];
+    var ValuesArray;
+    for (let i = 0; i < mas; i++) {
+        NewArray.push(Array[Math.floor(Math.random()*Array.length)]);
+    }
+    ValuesArray = document.getElementById('ValuesArray').innerHTML =`Array([${Array}], ${mas}) ->[${NewArray}]`;
 }
